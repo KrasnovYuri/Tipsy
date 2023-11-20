@@ -37,7 +37,7 @@
                                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIo-eL-aBS">
                                                         <rect key="frame" x="0.0" y="0.0" width="60" height="54"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="60" id="IFx-UE-bKQ"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="IFx-UE-bKQ"/>
                                                             <constraint firstAttribute="height" constant="54" id="kYf-wD-Hjw"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
@@ -50,7 +50,7 @@
                                                             <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EPU-4b-2To"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9K0-7z-ArJ">
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9K0-7z-ArJ">
                                                         <rect key="frame" x="105" y="0.0" width="132" height="54"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="54" id="qFa-7E-tWI"/>
@@ -121,9 +121,7 @@
                                             </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="81m-T5-XDq" firstAttribute="leading" secondItem="zuf-co-08b" secondAttribute="leading" constant="30" id="3K8-yC-5MT"/>
                                             <constraint firstAttribute="trailing" secondItem="81m-T5-XDq" secondAttribute="trailing" constant="30" id="5kY-eC-iG5"/>
-                                            <constraint firstItem="VcR-rx-F3m" firstAttribute="leading" secondItem="zuf-co-08b" secondAttribute="leading" constant="30" id="6sF-Nt-pjd"/>
                                             <constraint firstAttribute="trailing" secondItem="Hdv-jS-xwh" secondAttribute="trailing" id="GZH-bT-wK6"/>
                                             <constraint firstAttribute="trailing" secondItem="VcR-rx-F3m" secondAttribute="trailing" constant="30" id="rx6-QR-Iyf"/>
                                             <constraint firstItem="Hdv-jS-xwh" firstAttribute="leading" secondItem="zuf-co-08b" secondAttribute="leading" id="yXB-cO-8C7"/>
@@ -163,7 +161,6 @@
                                     <constraint firstAttribute="trailing" secondItem="m4L-ee-56T" secondAttribute="trailing" constant="50" id="SoR-Wc-UZy"/>
                                     <constraint firstAttribute="trailing" secondItem="jy8-a6-lRh" secondAttribute="trailing" id="WOi-PY-XfU"/>
                                     <constraint firstItem="jy8-a6-lRh" firstAttribute="leading" secondItem="asv-h5-1q6" secondAttribute="leading" id="gkA-HN-OUP"/>
-                                    <constraint firstItem="m4L-ee-56T" firstAttribute="leading" secondItem="asv-h5-1q6" secondAttribute="leading" constant="50" id="qOq-Uf-bmE"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mkg-pR-ACk">
@@ -211,10 +208,10 @@
             </objects>
             <point key="canvasLocation" x="-11" y="-81"/>
         </scene>
-        <!--View Controller-->
+        <!--Results View Controller-->
         <scene sceneID="e6Z-U4-NB9">
             <objects>
-                <viewController id="sVu-tR-wKb" sceneMemberID="viewController">
+                <viewController id="sVu-tR-wKb" customClass="ResultsViewController" customModule="Tipsy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Upq-Y3-aFd">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -275,6 +272,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10f"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="recalculatePressed:" destination="sVu-tR-wKb" eventType="touchUpInside" id="b3H-od-7IO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3MU-og-DQI"/>
@@ -290,10 +290,14 @@
                             <constraint firstAttribute="trailing" secondItem="aNC-bt-M8L" secondAttribute="trailing" id="cCp-o9-92A"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="settingsLabel" destination="eKm-7E-D3l" id="BFT-0H-sc8"/>
+                        <outlet property="totalLabel" destination="cBU-p6-10W" id="0dz-6X-h9L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eXF-dl-uB3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="804" y="-35"/>
+            <point key="canvasLocation" x="781" y="-82"/>
         </scene>
     </scenes>
     <resources>

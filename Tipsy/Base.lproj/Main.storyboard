@@ -179,6 +179,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="calculatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ab6-CR-L3P"/>
+                                    <segue destination="sVu-tR-wKb" kind="presentation" identifier="goToResult" id="fJJ-PO-UW2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -213,7 +214,7 @@
             <objects>
                 <viewController id="sVu-tR-wKb" customClass="ResultsViewController" customModule="Tipsy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Upq-Y3-aFd">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aNC-bt-M8L">
@@ -259,7 +260,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YdI-uF-feW">
-                                <rect key="frame" x="96.666666666666686" y="714" width="200" height="54"/>
+                                <rect key="frame" x="96.666666666666686" y="738" width="200" height="54"/>
                                 <color key="backgroundColor" red="0.0" green="0.69019607839999997" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="j2W-jr-Iwl"/>
